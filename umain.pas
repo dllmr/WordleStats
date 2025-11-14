@@ -5,7 +5,7 @@ unit uMain;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls;
 
 type
 
@@ -39,8 +39,15 @@ type
     lblRel4Result: TLabel;
     lblRatio34Result: TLabel;
     lblRatio35Result: TLabel;
+    sbMain: TStatusBar;
     procedure btnCalcClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure lblUnsolvedResultClick(Sender: TObject);
+    procedure lblWinPcResultClick(Sender: TObject);
+    procedure lblMeanResultClick(Sender: TObject);
+    procedure lblRel4ResultClick(Sender: TObject);
+    procedure lblRatio34ResultClick(Sender: TObject);
+    procedure lblRatio35ResultClick(Sender: TObject);
   private
 
   public
@@ -56,9 +63,48 @@ implementation
 
 { TfrmMain }
 
+const
+  HELP_DEFAULT = 'Click any result for details';
+  HELP_UNSOLVED = 'Unsolved: games not solved within 6 guesses';
+  HELP_WINPC = 'Win %: overall success rate';
+  HELP_MEAN = 'Mean: average guesses per game (unsolved count as 7)';
+  HELP_REL4 = 'Rel 4n: performance compared to always guessing in 4';
+  HELP_RATIO34 = 'Ratio 3:4: compares number guessed in 3 vs 4';
+  HELP_RATIO35 = 'Ratio 3:5: compares number guessed in 3 vs 5';
+
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
+  sbMain.Panels[0].Text := HELP_DEFAULT;
+end;
 
+procedure TfrmMain.lblUnsolvedResultClick(Sender: TObject);
+begin
+  sbMain.Panels[0].Text := HELP_UNSOLVED;
+end;
+
+procedure TfrmMain.lblWinPcResultClick(Sender: TObject);
+begin
+  sbMain.Panels[0].Text := HELP_WINPC;
+end;
+
+procedure TfrmMain.lblMeanResultClick(Sender: TObject);
+begin
+  sbMain.Panels[0].Text := HELP_MEAN;
+end;
+
+procedure TfrmMain.lblRel4ResultClick(Sender: TObject);
+begin
+  sbMain.Panels[0].Text := HELP_REL4;
+end;
+
+procedure TfrmMain.lblRatio34ResultClick(Sender: TObject);
+begin
+  sbMain.Panels[0].Text := HELP_RATIO34;
+end;
+
+procedure TfrmMain.lblRatio35ResultClick(Sender: TObject);
+begin
+  sbMain.Panels[0].Text := HELP_RATIO35;
 end;
 
 procedure TfrmMain.btnCalcClick(Sender: TObject);

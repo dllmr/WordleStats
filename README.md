@@ -45,6 +45,7 @@ WordleStats is a lightweight statistics calculator that helps Wordle players ana
    - Mean score (average guesses)
    - Relative performance to 4-guess baseline
    - Performance ratios
+5. **Getting Help**: Click any metric name or result value to see its description in the status bar at the bottom of the window
 
 ## How It Works
 
