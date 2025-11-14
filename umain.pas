@@ -39,7 +39,7 @@ type
     lblRel4Result: TLabel;
     lblRatio34Result: TLabel;
     lblRatio35Result: TLabel;
-    sbMain: TStatusBar;
+    stbMain: TStatusBar;
     procedure btnCalcClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure lblUnsolvedResultClick(Sender: TObject);
@@ -74,37 +74,37 @@ const
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_DEFAULT;
+  stbMain.Panels[0].Text := HELP_DEFAULT;
 end;
 
 procedure TfrmMain.lblUnsolvedResultClick(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_UNSOLVED;
+  stbMain.Panels[0].Text := HELP_UNSOLVED;
 end;
 
 procedure TfrmMain.lblWinPcResultClick(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_WINPC;
+  stbMain.Panels[0].Text := HELP_WINPC;
 end;
 
 procedure TfrmMain.lblMeanResultClick(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_MEAN;
+  stbMain.Panels[0].Text := HELP_MEAN;
 end;
 
 procedure TfrmMain.lblRel4ResultClick(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_REL4;
+  stbMain.Panels[0].Text := HELP_REL4;
 end;
 
 procedure TfrmMain.lblRatio34ResultClick(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_RATIO34;
+  stbMain.Panels[0].Text := HELP_RATIO34;
 end;
 
 procedure TfrmMain.lblRatio35ResultClick(Sender: TObject);
 begin
-  sbMain.Panels[0].Text := HELP_RATIO35;
+  stbMain.Panels[0].Text := HELP_RATIO35;
 end;
 
 procedure TfrmMain.btnCalcClick(Sender: TObject);

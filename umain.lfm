@@ -2046,7 +2046,7 @@ object frmMain: TfrmMain
     ParentColor = False
     OnClick = lblRatio35ResultClick
   end
-  object sbMain: TStatusBar
+  object stbMain: TStatusBar
     Left = 0
     Height = 23
     Top = 527
