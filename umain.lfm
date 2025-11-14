@@ -2051,6 +2051,7 @@ object frmMain: TfrmMain
     Height = 23
     Top = 527
     Width = 387
+    Enabled = False
     Panels = <    
       item
         Alignment = taCenter
